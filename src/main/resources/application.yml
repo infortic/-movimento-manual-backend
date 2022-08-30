@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost;databaseName=movimento;encrypt=false;
+    password: mssql1Ipw
+    username: sa
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  sql:
+    init:
+      mode: never
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+      dialect: org.hibernate.dialect.SQLServer2019Dialect
+    show-sql: true
