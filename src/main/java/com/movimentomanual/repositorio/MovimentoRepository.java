@@ -5,4 +5,6 @@ import com.movimentomanual.entity.MovimentoManual;
 
 public interface MovimentoRepository extends PagingAndSortingRepository<MovimentoManual, Long> {
 
+	Iterable<MovimentoManual> findByDatMesAndDatAno(Integer mes, Integer ano);
+	
 }

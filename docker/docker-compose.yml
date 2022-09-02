@@ -1,12 +1,10 @@
-version: '3.9'
-
+version: '2'
 services:
-  mssql:
-    image: mcr.microsoft.com/mssql/server:2019-latest
-    ports:
-      - 1433:1433
+  database:
+    image: oracle/database:12.1.0.2-ee
     volumes:
-      - ~/apps/mssql/data:/var/lib/mssqlql/data
-    environment:
-      - ACCEPT_EULA=Y
-      - SA_PASSWORD=mssql1Ipw
+      - /home/oracle/oradata:/opt/oracle/oradata # persistent oracle database data.
+    ports:
+      - 1521:1521
+      - 8080:8080
+      - 5500:5500

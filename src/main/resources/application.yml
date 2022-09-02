@@ -1,14 +1,15 @@
 spring:
   datasource:
-    url: jdbc:sqlserver://localhost;databaseName=movimento;encrypt=false;
-    password: mssql1Ipw
+    url: jdbc:h2:mem:movimento
+    password:
     username: sa
-    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-  sql:
-    init:
-      mode: never
+    driver-class-name: org.h2.Driver
   jpa:
     hibernate:
-      ddl-auto: create-drop
-      dialect: org.hibernate.dialect.SQLServer2019Dialect
+      ddl-auto: create
     show-sql: true
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
