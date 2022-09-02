@@ -70,10 +70,26 @@ public class MasaDeTeste extends RouteBuilder {
 			movimento.setDataMovimento(new Date());
 			movimento.setDatAno(2019);
 			movimento.setDatMes(02);
+			movimento.setNumeroLacamento(1);
 			movimento.setValor(new BigDecimal(2200));
 			movimento.setDescricao("DESC 001");
+			movimentoRepository.save(movimento);	
 			
-			movimentoRepository.save(movimento);			
+			ProdutoCosif produtoCosif2 = new ProdutoCosif();
+			produtoCosif.setCodClassificacao(3344L);
+			produtoCosif.setCodProduto(listaDeProdutos);
+			produtoCosif.setStaStatus(true);
+			
+			MovimentoManual movimento2 = new MovimentoManual();
+			movimento2.setCodCosif(produtoCosif2);
+			movimento2.setCodProduto("PROD 002");
+			movimento2.setDataMovimento(new Date());
+			movimento2.setDatAno(2019);
+			movimento2.setDatMes(02);
+			movimento2.setNumeroLacamento(2);
+			movimento2.setValor(new BigDecimal(2200));
+			movimento2.setDescricao("DESC 001");
+			movimentoRepository.save(movimento2);	
 		}
 
 	}

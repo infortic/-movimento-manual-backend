@@ -23,6 +23,8 @@ public class Servicos {
 	private ProdudoCosifRepository produtoCosifRepository;
 
 	public MovimentoManual incluirMovimento(MovimentoManual movimentoManual) {
+		
+		movimentoManual.setNumeroLacamento(0);
 		return movimentoRepository.save(movimentoManual);
 	}
 	
