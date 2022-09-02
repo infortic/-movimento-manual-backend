@@ -17,3 +17,6 @@ e atendendo requisições através da porta cadastrada no arquivo `application.y
 É possível utilizar o client do swagger através da url [http://localhost:8080/swagger-ui.html], possibilitando a verificação dos endpoints, dos DTOs esperados, e até mesmo realizar testes de requisições. 
 
 #### 2 - Pontos de melhorias
+
+Criar testes automatizados de interface, integração e únitários. Garantido assim o comprimento das regras de negócio e requisitos nao funcionais.
+
